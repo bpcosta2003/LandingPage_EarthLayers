@@ -1,0 +1,348 @@
+@import url("https://fonts.googleapis.com/css2?family=Righteous&family=Sarala:wght@700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+::selection {
+  background: rgb(66, 113, 201);
+}
+
+body {
+  font-size: 100%;
+  background-image: linear-gradient(
+    to right top,
+    #062a5e,
+    #01234b,
+    #031c39,
+    #051427,
+    #000916
+  );
+  background-size: cover;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  padding: 2rem;
+}
+
+.globe {
+  width: 207px;
+  height: 207px;
+  border-radius: 100%;
+  background-image: url(img/globe.jpg);
+  background-size: cover;
+  box-shadow: inset -10px -10px 15px rgba(0, 0, 0, 0.726),
+    inset 10px 10px 15px rgba(0, 0, 0, 0.726);
+  animation: rotate 10s linear infinite;
+}
+
+@keyframes rotate {
+  from {
+    background-position: left center;
+  }
+  to {
+    background-position: -368px center;
+  }
+}
+
+header nav {
+  display: flex;
+  gap: 32px;
+  padding: 0.5rem;
+  border-radius: 20px;
+  backdrop-filter: blur(2rem);
+}
+
+header nav a {
+  color: white;
+  font-family: "Sarala", sans-serif;
+  transition: 0.3s;
+}
+
+header nav a:hover {
+  color: rgba(255, 255, 255, 0.5);
+  font-family: "Sarala", sans-serif;
+  transition: 0.3s;
+}
+
+main {
+  margin-bottom: 48px;
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.main-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.main-content-ex {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.main-content div h1 {
+  font-family: "Righteous", cursive;
+  font-weight: 400;
+  font-size: 64px;
+  color: white;
+}
+
+.main-content div h2 {
+  font-family: "Sarala", sans-serif;
+  font-weight: 200;
+  font-size: 24px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.main-content div button {
+  background-color: rgba(255, 255, 255, 0.842);
+  width: 180px;
+  padding: 1.5rem 0rem;
+  border: 1px solid transparent;
+  box-shadow: 4px 5px 4px rgba(0, 0, 0, 0.274);
+  border-radius: 20px;
+  font-family: "Sarala", sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  color: #121212;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.main-content div button:hover {
+  background-color: rgba(255, 255, 255, 0.459);
+  width: 200px;
+  transition: 0.3s;
+}
+
+.flip-card {
+  background-color: transparent;
+  width: 442px;
+  height: 618px;
+  margin-top: 48px;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 1.5rem;
+}
+
+.flip-card-front {
+  background-color: rgba(255, 255, 255, 0);
+  color: rgb(255, 255, 255);
+}
+
+.flip-card-front img {
+  border-radius: 1.5rem;
+}
+
+.flip-card-back {
+  padding: 2rem;
+  background-color: rgba(170, 170, 170, 0.144);
+  color: white;
+  transform: rotateY(180deg);
+  box-shadow: inset 5px 5px 45px -4px #000000a4;
+}
+
+.flip-card-back h1 {
+  margin-top: 38px;
+  font-family: "Righteous", cursive;
+  font-size: 20px;
+}
+.flip-card-back p {
+  margin-top: 58px;
+  color: rgba(255, 255, 255, 0.5);
+  font-family: "Sarala", sans-serif;
+}
+
+.highlight_blue {
+  color: #ffffff;
+}
+
+.flip-card-back img {
+  margin-top: 58px;
+  width: 17rem;
+}
+
+/* .main-content img {
+  margin-top: 4rem;
+  perspective: 1000px;
+  box-shadow: 2px 5px 26px 0px #000000;
+  transition: 0.3s;
+} */
+
+.secondary-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  margin-top: 48px;
+}
+
+.secondary-content h3 {
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  padding-top: 48px;
+  font-family: "Righteous", cursive;
+  font-weight: 400;
+  font-size: 24px;
+  color: white;
+  margin-bottom: 16px;
+}
+
+.secondary-content p {
+  font-family: "Sarala", sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+footer {
+  padding: 32px;
+  color: white;
+  font-family: "Sarala", sans-serif;
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  text-align: center;
+}
+
+@media (max-width: 1000px) {
+  header {
+    flex-direction: column;
+    padding: 2rem 0rem;
+    margin: 96px 0px;
+  }
+  header nav {
+    padding: 0px 10px;
+    border-radius: 20px;
+    backdrop-filter: blur(2rem);
+    gap: 20px;
+  }
+  header nav a {
+    font-size: 15px;
+    z-index: 1;
+  }
+  .main-content {
+    flex-direction: column;
+  }
+
+  @keyframes kenburns-top {
+    0% {
+      transform: scale(1) translateY(0);
+      transform-origin: 50% 16%;
+    }
+    100% {
+      transform: scale(1) translateY(10px);
+      transform-origin: top;
+    }
+  }
+
+  .main-content-ex {
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(20px);
+    flex-direction: column;
+    z-index: 1;
+    gap: 0;
+    margin-top: 20px;
+    box-shadow: 2px 5px 26px 0px #000000;
+  }
+  .main-content div h1 {
+    padding-top: 4rem;
+    font-size: 40px;
+    text-align: center;
+  }
+
+  .main-content div h2 {
+    padding: 1.5rem;
+    font-weight: 200;
+    font-size: 24px;
+    color: #fff;
+    text-align: center;
+  }
+
+  .main-content div button {
+    display: block;
+    margin: auto;
+    background-color: rgba(255, 255, 255, 0.842);
+    width: 180px;
+    padding: 1rem 0rem;
+    backdrop-filter: blur(0.5rem);
+    font-size: 20px;
+    margin-bottom: 4rem;
+  }
+
+  .secondary-content {
+    gap: 16px;
+    margin-top: 55px;
+    padding: 0.5rem;
+  }
+  .secondary-content p {
+    font-size: 15px;
+  }
+  footer {
+    font-size: 12px;
+  }
+  .globe {
+    position: absolute;
+    z-index: 0;
+  }
+
+  .flip-card {
+    width: 290px;
+    height: 400px;
+    margin-top: 48px;
+  }
+
+  .flip-card-front img {
+    width: 290px;
+    height: 400px;
+    border-radius: 1.5rem;
+  }
+
+  .flip-card-back h1 {
+    padding: 0 !important;
+    font-family: "Righteous", cursive;
+    font-size: 10px;
+  }
+  .flip-card-back p {
+    margin-top: 38px !important;
+    color: rgba(255, 255, 255, 0.5);
+    font-family: "Sarala", sans-serif;
+    font-size: 15px;
+  }
+
+  .highlight_blue {
+    color: #ffffff;
+  }
+
+  .flip-card-back img {
+    display: none;
+  }
+}
