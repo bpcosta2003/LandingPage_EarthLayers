@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+
 <div> 
 <h1>LandingPage - Earth Layers</h1>
 <h2>It's a Landing page introducing and teach you about the earth layers, it's just a preview of the whole real website about this subject.</h2>
