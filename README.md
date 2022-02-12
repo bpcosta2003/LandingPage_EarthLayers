@@ -11,7 +11,7 @@
 
 ### About 👨🏽‍🏫
 
-<h3>It's a Landing page introducing and teaching you about the earth layers, it's just a preview of the whole real website about this subject.</h3>
+<h3>It's a Landing page of a WebSite that teaches you about the Earth Layers (https://earth-layers-app.vercel.app/)</h3>
 
 ##
 
